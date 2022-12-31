@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <title>Formulário de cadastro</title>
+  </head>
+  <body>
+    <h1>Formulário Cadastral</h1>
+    <p>Por favor, preencha os dados para concluir seu cadastro!</p>
+    <form action="https://register-demo.freecodecamp.org" method="post">
+      <fieldset>
+        <label for="nome"
+          >Nome:
+          <input type="text" id="nome" required />
+        </label>
+        <label for="sobrenome"
+          >Sobrenome:
+          <input type="text" id="sobrenome" required />
+        </label>
+        <label for="email"
+          >E-mail:
+          <input type="email" id="email" required />
+        </label>
+        <label for="nova-senha"
+          >Digite sua nova senha:
+          <input
+            type="password"
+            name=""
+            id="nova-senha"
+            pattern="[a-z0-5]{8,}"
+            required
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="conta-pessoal"
+          ><input type="radio" name="tipo-conta" id="conta-pessoal" /> Conta
+          Pessoal</label
+        >
+        <label for="conta-negocios"
+          ><input type="radio" name="tipo-conta" id="conta-negocios" /> Conta de
+          negócios</label
+        >
+        <label for="termos-e-condicoes"
+          ><input type="checkbox" required id="termos-e-condicoes" /> Eu aceito
+          os
+          <a href="https://www.freecodecamp.org/news/terms-of-service/"
+            >Termos e condições</a
+          ></label
+        >
+      </fieldset>
+      <fieldset>
+        <label for="foto">
+          Faça upload de uma foto sua : <input type="file" />
+        </label>
+        <label for="idade">
+          Preencha com a sua idade: <input type="number" min="13" max="120" />
+        </label>
+        <label for="pesquisa">
+          Como conheceu nós?
+          <select name="pesquisa" id="pesquisa">
+            <option value="0">(Selecione uma alternativa)</option>
+            <option value="1">Facebook</option>
+            <option value="2">Instagram</option>
+            <option value="3">Google</option>
+            <option value="4">Outro</option>
+          </select>
+        </label>
+        <label for="bio"
+          >Preencha sua bio:
+          <textarea
+            name="bio"
+            id="bio"
+            cols="30"
+            rows="10"
+            placeholder="Eu gosto de programar na praia..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
